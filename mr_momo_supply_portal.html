@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mr Momo Supply Portal</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f8f8;
+      color: #222;
+      line-height: 1.6;
+    }
+    header {
+      background: #b30000;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 { font-size: 2rem; }
+    header p { margin-top: 8px; }
+    nav {
+      background: #222;
+      padding: 12px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 25px;
+    }
+    .hero {
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    }
+    .card h3 { margin-bottom: 10px; }
+    .card input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 8px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    form {
+      background: white;
+      padding: 25px;
+      border-radius: 14px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    button {
+      background: #b30000;
+      color: white;
+      border: none;
+      padding: 14px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    footer {
+      margin-top: 30px;
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mr Momo Supply Portal</h1>
+    <p>Fast & Reliable Internal Ordering for All Branches</p>
+  </header>
+
+  <nav>
+    <a href="#products">Products</a>
+    <a href="#order">Place Order</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+    <section class="hero">
+      <h2>Welcome to the Supply Hub</h2>
+      <p>Order your branch essentials quickly and efficiently.</p>
+    </section>
+
+    <section id="products">
+      <h2>Available Products & Order Quantities</h2>
+      <div class="products">
+        <div class="card"><h3>Veg Momos</h3><p>Select quantity</p><select name="veg_momos_qty"><option>0</option><option>50</option><option>100</option><option>150</option><option>200</option><option>250</option><option>300</option></select></div>
+        <div class="card"><h3>Paneer Momos</h3><p>Select quantity</p><select name="paneer_momos_qty"><option>0</option><option>50</option><option>100</option><option>150</option><option>200</option><option>250</option><option>300</option></select></div>
+        <div class="card"><h3>Veg Cheese Momos</h3><p>Select quantity</p><select name="veg_cheese_momos_qty"><option>0</option><option>50</option><option>100</option><option>150</option><option>200</option><option>250</option><option>300</option></select></div>
+        <div class="card"><h3>Chicken Momos</h3><p>Select quantity</p><select name="chicken_momos_qty"><option>0</option><option>50</option><option>100</option><option>150</option><option>200</option><option>250</option><option>300</option></select></div>
+        <div class="card"><h3>Cheese Corn Momos</h3><p>Select quantity</p><select name="cheese_corn_momos_qty"><option>0</option><option>50</option><option>100</option><option>150</option><option>200</option><option>250</option><option>300</option></select></div>
+      </div>
+    </section>
+
+    <section id="order">
+      <h2>Place Order</h2>
+      <form action="https://formspree.io/f/your-form-id" method="POST">
+        <input type="text" name="branch" placeholder="Branch Name" required />
+        <input type="text" name="manager" placeholder="Manager Name" required />
+        <input type="tel" name="contact" placeholder="Contact Number" required />
+        <h3>Momo Orders</h3>
+        <label>Veg Momos</label><select name="veg_momos"><option>0</option><option>50</option><option>100</option><option>150</option><option>200</option><option>250</option><option>300</option></select>
+        <label>Paneer Momos</label><select name="paneer_momos"><option>0</option><option>50</option><option>100</option><option>150</option><option>200</option><option>250</option><option>300</option></select>
+        <label>Veg Cheese Momos</label><select name="veg_cheese_momos"><option>0</option><option>50</option><option>100</option><option>150</option><option>200</option><option>250</option><option>300</option></select>
+        <label>Chicken Momos</label><select name="chicken_momos"><option>0</option><option>50</option><option>100</option><option>150</option><option>200</option><option>250</option><option>300</option></select>
+        <label>Cheese Corn Momos</label><select name="cheese_corn_momos"><option>0</option><option>50</option><option>100</option><option>150</option><option>200</option><option>250</option><option>300</option></select>
+
+        <h3>Packaging & Other Materials</h3>
+        <label>Mayo</label><input type="number" name="mayo" min="0" placeholder="Qty" />
+        <label>Tandoori Mayo</label><input type="number" name="tandoori_mayo" min="0" placeholder="Qty" />
+        <label>Royal Cream Mayo</label><input type="number" name="royal_cream_mayo" min="0" placeholder="Qty" />
+        <label>750ml Foil Packaging Box</label><input type="number" name="foil_box_750" min="0" placeholder="Qty" />
+        <label>450ml Foil Packaging Box</label><input type="number" name="foil_box_450" min="0" placeholder="Qty" />
+        <label>Foil Serving Dish</label><input type="number" name="foil_serving_dish" min="0" placeholder="Qty" />
+        <label>Small Packaging Bag</label><input type="number" name="small_bag" min="0" placeholder="Qty" />
+        <label>Big Packaging Bag</label><input type="number" name="big_bag" min="0" placeholder="Qty" />
+        <label>Paper Katori</label><input type="number" name="paper_katori" min="0" placeholder="Qty" />
+        <label>Dip</label><input type="number" name="dip" min="0" placeholder="Qty" />
+        <label>SP. Masala</label><input type="number" name="sp_masala" min="0" placeholder="Qty" />
+        <label>Tissues</label><input type="number" name="tissues" min="0" placeholder="Qty" />
+        <label>Spoon / Toothpick</label><input type="number" name="spoon_toothpick" min="0" placeholder="Qty" />
+        <label>Oil</label><input type="number" name="oil" min="0" placeholder="Qty" />
+        <label>Butter</label><input type="number" name="butter" min="0" placeholder="Qty" />
+        <label>Dustbin Bag</label><input type="number" name="dustbin_bag" min="0" placeholder="Qty" />
+        <textarea name="notes" rows="4" placeholder="Special notes"></textarea>
+        <button type="submit">Submit Order</button>
+      </form>
+    </section>
+
+    <section id="contact" class="hero">
+      <h2>Need Help?</h2>
+      <p>Contact Admin: +91-XXXXXXXXXX</p>
+      <p>Email: support@mrmomo.com</p>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2026 Mr Momo Supply Portal</p>
+  </footer>
+</body>
+</html>
